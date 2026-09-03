@@ -1,0 +1,226 @@
+/* RESET E ESTILOS GERAIS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 768px) {
+  header {
+    padding: 60px 20px;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .sobre, .diferenciais {
+    padding: 25px;
+  }
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* CABEÇALHO (HERO SECTION) */
+/* CABEÇALHO (HERO SECTION) */
+header {
+  background-color: #0c2033;
+  width: 100%;
+  padding: 40px 8%;
+  box-sizing: border-box;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between; /* Coloca a logo na esquerda e a foto na direita */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-brand img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-photo img {
+  max-height: 450px;
+  width: auto;
+  display: block;
+  border-radius: 15px; /* Adicione esta linha para arredondar */
+}
+
+/* BOTÃO DE AÇÃO (CTA) */
+/* Estilo do container do botão */
+.cta-container {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #ffffff; /* Ou remova esta linha para usar o fundo padrão do body */
+}
+
+/* Atualize a regra do botão de 'header a' para '.cta-container a' */
+.cta-container a {
+  display: inline-block;
+  background-color: #c59b27;
+  color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.05rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cta-container a:hover {
+  background-color: #a37f1e;
+  transform: translateY(-2px);
+}
+
+/* SEÇÕES EM GERAL */
+section {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #0d233a;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #c59b27;
+  margin: 10px auto 0 auto;
+}
+
+/* GRID DE ÁREAS DE ATUAÇÃO */
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 30px;
+  width: calc(33.333% - 24px);
+  min-width: 280px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  color: #0d233a;
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+/* SOBRE & DIFERENCIAIS */
+.sobre, .diferenciais {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-bottom: 16px;
+  padding-left: 28px;
+  position: relative;
+  font-size: 1.05rem;
+}
+
+ul li::before {
+  content: '✓';
+  color: #c59b27;
+  font-weight: bold;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: -2px;
+}
+
+/* FAQ */
+.faq-item {
+  background-color: #ffffff;
+  margin-bottom: 16px;
+  padding: 24px;
+  border-left: 4px solid #c59b27;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.faq-item h3 {
+  color: #0d233a;
+  margin-bottom: 8px;
+  font-size: 1.15rem;
+}
+
+/* RODAPÉ */
+footer {
+  background-color: #0d233a;
+  color: #a0aec0;
+  text-align: center;
+  padding: 35px 20px;
+  margin-top: 70px;
+  font-size: 0.95rem;
+}
+
+footer p {
+  margin-bottom: 6px;
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+@media (max-width: 768px) {
+  header {
+    padding: 60px 20px;
+  }
+
+  header h1 {
+    font-size: 1.75rem;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  .sobre, .diferenciais {
+    padding: 25px;
+  }
+}
