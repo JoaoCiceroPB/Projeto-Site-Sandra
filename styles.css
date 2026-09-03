@@ -3,6 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
+  height: auto;
 }
 
 body {
@@ -24,7 +26,7 @@ body {
   }
 
   .sobre, .diferenciais {
-    padding: 25px;
+  padding: 25px 15px; /* 25px em cima/baixo | 15px nas laterais */
   }
 
   /* REGRAS DO HERO PARA O CELULAR */
@@ -51,7 +53,6 @@ body {
   line-height: 1.6;
 }
 
-/* CABEÇALHO (HERO SECTION) */
 /* CABEÇALHO (HERO SECTION) */
 header {
   background-color: #0c2033;
