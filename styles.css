@@ -12,7 +12,7 @@ body {
 /* RESPONSIVIDADE PARA CELULARES */
 @media (max-width: 768px) {
   header {
-    padding: 60px 20px;
+    padding: 30px 15px;
   }
 
   header h1 {
@@ -25,6 +25,23 @@ body {
 
   .sobre, .diferenciais {
     padding: 25px;
+  }
+
+  /* REGRAS DO HERO PARA O CELULAR */
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero-brand img {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .hero-photo img {
+    max-height: 300px;
+    margin: 0 auto;
   }
 }
 
