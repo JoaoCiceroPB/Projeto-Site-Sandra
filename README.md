@@ -14,7 +14,6 @@ Uma landing page moderna, elegante e responsiva desenvolvida para apresentação
 
 - **HTML5:** Estruturação semântica da página.
 - **CSS3:** Estilização, layout responsivo e animações.
-- **JavaScript:** Interatividade e validações do formulário de contato.
 
 ---
 
