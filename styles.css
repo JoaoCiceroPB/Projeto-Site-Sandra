@@ -3,54 +3,31 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+img {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 
-body {
-  overflow-x: hidden;
-}
-
-/* RESPONSIVIDADE PARA CELULARES */
-@media (max-width: 768px) {
-  header {
-    padding: 30px 15px;
-  }
-
-  header h1 {
-    font-size: 1.75rem;
-  }
-
-  .card {
-    width: 100%;
-  }
-
-  .sobre, .diferenciais {
-  padding: 25px 15px; /* 25px em cima/baixo | 15px nas laterais */
-}
-
-  /* REGRAS DO HERO PARA O CELULAR */
-  .hero-content {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-
-  .hero-brand img {
-    max-width: 240px;
-    margin: 0 auto;
-  }
-
-  .hero-photo img {
-    max-height: 300px;
-    margin: 0 auto;
-  }
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 body {
   background-color: #f8f9fa;
   color: #333333;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 /* CABEÇALHO (HERO SECTION) */
@@ -63,7 +40,7 @@ header {
 
 .hero-content {
   display: flex;
-  justify-content: space-between; /* Coloca a logo na esquerda e a foto na direita */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   max-width: 1200px;
@@ -81,18 +58,18 @@ header {
   max-height: 450px;
   width: auto;
   display: block;
-  border-radius: 15px; /* Adicione esta linha para arredondar */
+  border-radius: 15px;
 }
 
 /* BOTÃO DE AÇÃO (CTA) */
-/* Estilo do container do botão */
 .cta-container {
   text-align: center;
   padding: 30px 20px;
-  background-color: #ffffff; /* Ou remova esta linha para usar o fundo padrão do body */
+  background-color: #ffffff;
+  position: relative;
+  z-index: 10;
 }
 
-/* Atualize a regra do botão de 'header a' para '.cta-container a' */
 .cta-container a {
   display: inline-block;
   background-color: #c59b27;
@@ -102,8 +79,11 @@ header {
   text-decoration: none;
   font-weight: bold;
   font-size: 1.05rem;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
 .cta-container a:hover {
@@ -127,7 +107,7 @@ section h2 {
 }
 
 section h2::after {
-  content: '';
+  content: "";
   display: block;
   width: 60px;
   height: 3px;
@@ -137,9 +117,8 @@ section h2::after {
 
 /* GRID DE ÁREAS DE ATUAÇÃO */
 .cards-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 24px;
 }
 
@@ -148,10 +127,10 @@ section h2::after {
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   padding: 30px;
-  width: calc(33.333% - 24px);
-  min-width: 280px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -166,26 +145,27 @@ section h2::after {
 }
 
 /* SOBRE & DIFERENCIAIS */
-.sobre, .diferenciais {
+.sobre,
+.diferenciais {
   background-color: #ffffff;
   padding: 40px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
 }
 
-ul {
+.diferenciais ul {
   list-style: none;
 }
 
-ul li {
+.diferenciais ul li {
   margin-bottom: 16px;
   padding-left: 28px;
   position: relative;
   font-size: 1.05rem;
 }
 
-ul li::before {
-  content: '✓';
+.diferenciais ul li::before {
+  content: "✓";
   color: #c59b27;
   font-weight: bold;
   font-size: 1.2rem;
@@ -214,31 +194,141 @@ ul li::before {
 footer {
   background-color: #0d233a;
   color: #a0aec0;
-  text-align: center;
-  padding: 35px 20px;
+  padding: 50px 20px;
   margin-top: 70px;
   font-size: 0.95rem;
 }
 
-footer p {
-  margin-bottom: 6px;
+.footer-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer-info {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-info h3 {
+  color: #ffffff;
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+}
+
+.footer-info p {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+/* CONTAINER DO MAPA */
+.mapa-container {
+  flex: 1;
+  width: 100%;
+  max-width: 450px;
+  height: 220px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+.mapa-container iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /* RESPONSIVIDADE PARA CELULARES */
 @media (max-width: 768px) {
   header {
-    padding: 60px 20px;
-  }
-
-  header h1 {
-    font-size: 1.75rem;
+    padding: 30px 15px;
   }
 
   .card {
     width: 100%;
   }
 
-  .sobre, .diferenciais {
-    padding: 25px;
+  .sobre,
+  .diferenciais {
+    padding: 25px 15px;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .hero-brand img {
+    max-width: 240px;
+    margin: 0 auto;
+  }
+
+  .hero-photo img {
+    max-height: 300px;
+    margin: 0 auto;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .footer-info {
+    text-align: center;
+  }
+
+  .mapa-container {
+    max-width: 100%;
+    height: 180px;
+  }
+}
+
+/* BOTÃO FLUTUANTE WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  background-color: #25d366;
+  border-radius: 50px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #20ba5a;
+}
+
+.whatsapp-icon {
+  width: 34px;
+  height: 34px;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .whatsapp-icon {
+    width: 28px;
+    height: 28px;
   }
 }
