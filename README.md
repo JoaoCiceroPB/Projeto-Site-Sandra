@@ -2,6 +2,8 @@
 
 Uma landing page moderna, elegante e responsiva desenvolvida para apresentação de serviços de advocacia, facilitando o contato direto de clientes através da web.
 
+<img width="1904" height="895" alt="Prévia do site" src="https://github.com/user-attachments/assets/8f3e610d-cc02-41c3-9106-12a2cd77eaca" />
+
 ---
 
 ## 💻 Demonstração
